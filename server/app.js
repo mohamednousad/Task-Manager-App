@@ -22,6 +22,9 @@ app.use(express.json());
 import taskRoutes from "./router/taskRoutes.js";
 app.use ("/api/task", taskRoutes);
 
+import userRoutes from "./router/userRoutes.js";
+app.use ("/api/user", userRoutes);
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong!" });

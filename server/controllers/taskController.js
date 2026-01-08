@@ -26,33 +26,6 @@ export const getall = async (req, res) => {
 };
 
 // Create a new task
-// export const post = async (req, res) => {
-//     const { title } = req.body;
-
-//     if (!title) {
-//       return res.status(400).json({
-//         success: false,
-//         message: "Title is required"
-//       });
-//     }
-
-//     try {
-//       const task = await Task.create({ title });
-
-//       res.status(201).json({
-//         success: true,
-//         message: "Task created successfully",
-//         data: task
-//       });
-//     } catch (error) {
-//       res.status(500).json({ 
-//         success: false,
-//         message: "Server Error"
-//       });
-//     }
-// };
-
-// Create a new task
 export const post = async (req, res) => {
   try {
     const data = req.body;
